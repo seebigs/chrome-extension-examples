@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Score Tracker Display v3",
+    "version": "1.0",
+    "permissions": ["storage"],
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"]
+        }
+    ],
+    "action": {},
+    "background": {
+        "service_worker": "background.js"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": ["onpage.js"],
+            "matches": [],
+            "extension_ids": []
+        }
+    ]
+}
